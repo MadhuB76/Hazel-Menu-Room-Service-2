@@ -14,8 +14,8 @@
         .s5 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
         .s6 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8pt; }
         .s7 { color: #7F8C68; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
-    /* Sticky footer style */
-    .footer {
+   /* Sticky footer style */
+   .footer {
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -47,6 +47,26 @@
             border-radius: 5px;
             cursor: pointer;
             margin-right: 10px; /* Adjust margin between buttons */
+        }
+        /* Floating links */
+        .floating-links {
+            position: absolute;
+            bottom: calc(100% + 0px); /* Place just above the footer with a 20px gap */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000; /* Ensure it's above other content */
+            display: none; /* Initially hide the links */
+            padding: 5px;
+        }
+        .floating-links a {
+            display: block;
+            margin-bottom: 5px; /* Adjust spacing between links */
+            color: #7F8C68; /* Set link color */
+            font-family: Cambria, serif; /* Set link font family */
+            font-style: normal; /* Set link font style */
+            font-weight: normal; /* Set link font weight */
+            text-decoration: none; /* Set link text decoration */
+            font-size: 9pt; /* Set link font size */
         }
         /* Responsive adjustments */
         @media only screen and (max-width: 768px) {
@@ -117,7 +137,8 @@
         <!-- Share button -->
         <button class="share-btn">Share</button>
         <!-- AddToAny buttons -->
-        <div class="a2a-container">
+        <div class="floating-links">
+            <!-- AddToAny BEGIN -->
             <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
                 <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                 <a class="a2a_button_facebook"></a>
@@ -128,14 +149,24 @@
                 <a class="a2a_button_telegram"></a>
             </div>
             <script async src="https://static.addtoany.com/menu/page.js"></script>
+            <!-- AddToAny END -->
         </div>
         <!-- "Get in Touch" button -->
+        <a href="http://codetta.digital/contact-us" target="_blank">
         <button class="get-in-touch">Get in Touch</button>
+    </a>
     </div>
 
     <script>
-        document.querySelector('.share-btn').addEventListener('click', function() {
-            document.querySelector('.a2a-container').style.display = 'flex';
+        var shareBtn = document.querySelector('.share-btn');
+        var floatingLinks = document.querySelector('.floating-links');
+
+        shareBtn.addEventListener('click', function() {
+            if (floatingLinks.style.display === 'block') {
+                floatingLinks.style.display = 'none';
+            } else {
+                floatingLinks.style.display = 'block';
+            }
         });
     </script>
 </body>
