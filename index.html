@@ -14,8 +14,8 @@
         .s5 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
         .s6 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8pt; }
         .s7 { color: #7F8C68; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
-        /* Sticky footer style */
-        .footer {
+    /* Sticky footer style */
+    .footer {
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -28,15 +28,25 @@
             align-items: center;
         }
         .footer .a2a-container {
+            display: none; /* Initially hide the links container */
             margin-right: 10px; /* Adjust margin between links and button */
         }
         .get-in-touch {
-            background-color: #000000;
+            background-color: #EE7371;
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+        }
+        .share-btn {
+            background-color: #EE7371;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px; /* Adjust margin between buttons */
         }
         /* Responsive adjustments */
         @media only screen and (max-width: 768px) {
@@ -104,6 +114,8 @@
     <p style="text-indent: 0pt;text-align: left;"><br/></p>
     <p class="s7" style="padding-left: 2pt;text-indent: 0pt;text-align: center; margin-bottom: 60px;">V: Vegetarian VG: Vegan VGA: Adaptable to be vegan</p>
     <div class="footer">
+        <!-- Share button -->
+        <button class="share-btn">Share</button>
         <!-- AddToAny buttons -->
         <div class="a2a-container">
             <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
@@ -120,5 +132,11 @@
         <!-- "Get in Touch" button -->
         <button class="get-in-touch">Get in Touch</button>
     </div>
+
+    <script>
+        document.querySelector('.share-btn').addEventListener('click', function() {
+            document.querySelector('.a2a-container').style.display = 'flex';
+        });
+    </script>
 </body>
 </html>
