@@ -15,20 +15,34 @@
         .s6 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8pt; }
         .s7 { color: #7F8C68; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
         /* Sticky footer style */
-        .a2a_kit {
+        .footer {
             position: fixed;
-            bottom: 20px; /* Adjust the distance from the bottom as needed */
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: 0;
+            width: 100%;
+            background-color: #fff; /* Adjust background color as needed */
+            padding: 20px; /* Adjust padding as needed */
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for a raised effect */
             z-index: 999; /* Ensure it's above other content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        /* Styles for AddToAny buttons */
-        .a2a_kit {
-            /* Add your custom styles here */
+        .footer .a2a-container {
+            margin-right: 10px; /* Adjust margin between links and button */
+        }
+        .get-in-touch {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         /* Responsive adjustments */
         @media only screen and (max-width: 768px) {
-            /* Adjust styles for smaller screens if necessary */
+            .footer {
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
         }
     </style>
 </head>
@@ -89,19 +103,22 @@
     <p class="s7" style="padding-left: 2pt;text-indent: 0pt;text-align: center;">Although we strive to take every precaution, unfortunately we cannot guarantee the total absence of trace allergens in our dishes.</p>
     <p style="text-indent: 0pt;text-align: left;"><br/></p>
     <p class="s7" style="padding-left: 2pt;text-indent: 0pt;text-align: center; margin-bottom: 60px;">V: Vegetarian VG: Vegan VGA: Adaptable to be vegan</p>
-    <!-- AddToAny BEGIN -->
-    <div class="a2a-container">
-        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-            <a class="a2a_button_facebook"></a>
-            <a class="a2a_button_email"></a>
-            <a class="a2a_button_whatsapp"></a>
-            <a class="a2a_button_facebook_messenger"></a>
-            <a class="a2a_button_google_gmail"></a>
-            <a class="a2a_button_telegram"></a>
+    <div class="footer">
+        <!-- AddToAny buttons -->
+        <div class="a2a-container">
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_email"></a>
+                <a class="a2a_button_whatsapp"></a>
+                <a class="a2a_button_facebook_messenger"></a>
+                <a class="a2a_button_google_gmail"></a>
+                <a class="a2a_button_telegram"></a>
+            </div>
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
         </div>
-        <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <!-- "Get in Touch" button -->
+        <button class="get-in-touch">Get in Touch</button>
     </div>
-    <!-- AddToAny END -->
 </body>
 </html>
