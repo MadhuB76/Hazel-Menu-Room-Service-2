@@ -5,7 +5,7 @@
     <title>file_1708339180641</title>
     <style type="text/css">
         * {margin:0; padding:0; text-indent:0; }
-        body { background-color: #EFDCC9; }
+        body { background-color: #EFDCC9; position: relative; min-height: 100vh; }
         .s1 { color: #EE7371; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 33pt; }
         .s2 { color: #EE7371; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 19.5pt; }
         p { color: #7F8C68; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; margin:0pt; }
@@ -14,11 +14,13 @@
         .s5 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
         .s6 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8pt; }
         .s7 { color: #7F8C68; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
-        /* AddToAny container */
-        .a2a-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px; /* Adjust as needed */
+        /* Sticky footer style */
+        .a2a_kit {
+            position: fixed;
+            bottom: 20px; /* Adjust the distance from the bottom as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999; /* Ensure it's above other content */
         }
         /* Styles for AddToAny buttons */
         .a2a_kit {
@@ -86,7 +88,7 @@
     <p class="s7" style="padding-left: 2pt;text-indent: 0pt;text-align: center;">Please let your server know of any dietary requirements, allergen information is available on request.</p>
     <p class="s7" style="padding-left: 2pt;text-indent: 0pt;text-align: center;">Although we strive to take every precaution, unfortunately we cannot guarantee the total absence of trace allergens in our dishes.</p>
     <p style="text-indent: 0pt;text-align: left;"><br/></p>
-    <p class="s7" style="padding-left: 2pt;text-indent: 0pt;text-align: center;">V: Vegetarian VG: Vegan VGA: Adaptable to be vegan</p>
+    <p class="s7" style="padding-left: 2pt;text-indent: 0pt;text-align: center; margin-bottom: 60px;">V: Vegetarian VG: Vegan VGA: Adaptable to be vegan</p>
     <!-- AddToAny BEGIN -->
     <div class="a2a-container">
         <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
@@ -98,8 +100,8 @@
             <a class="a2a_button_google_gmail"></a>
             <a class="a2a_button_telegram"></a>
         </div>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
     </div>
-    <script async src="https://static.addtoany.com/menu/page.js"></script>
     <!-- AddToAny END -->
 </body>
 </html>
