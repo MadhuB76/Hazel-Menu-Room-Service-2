@@ -4,13 +4,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>file_1708339180641</title>
     <style type="text/css">
-        * { margin: 0; padding: 0; text-indent: 0; box-sizing: border-box; }
-        body { background-color: #EFDCC9; position: relative; min-height: 100vh; overflow-x: hidden; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .s1 { color: #EE7371; font-family: Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 33pt; }
-        .s2 { color: #EE7371; font-family: Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 19.5pt; }
-        p { color: #7F8C68; font-family: Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; margin: 10px 0; }
-        .s3, .s4, .s5, .s6, .s7 { color: #7F8C68; font-family: Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
+        * {margin:0; padding:0; text-indent:0; }
+        body { background-color: #EFDCC9; position: relative; min-height: 100vh; }
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: #EFDCC9; /* Adjust background color as needed */
+            padding: 20px; /* Adjust padding as needed */
+            z-index: 999; /* Ensure it's above other content */
+            text-align: center; /* Center align text */
+        }
+        .s1 { color: #EE7371; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 33pt; }
+        .s2 { color: #EE7371; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 19.5pt; }
+        p { color: #7F8C68; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; margin:0pt; }
+        .s3 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+        .s4 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
+        .s5 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
+        .s6 { color: #7F8C68; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8pt; }
+        .s7 { color: #7F8C68; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
         /* Sticky footer style */
         .footer {
             position: fixed;
@@ -68,22 +79,16 @@
         /* Responsive adjustments */
         @media only screen and (max-width: 768px) {
             .footer {
-                position: fixed;
                 padding: 10px; /* Adjust padding for smaller screens */
             }
-            .container {
-                padding: 20px 10px;
-            }
-            p { margin: 5px 0; } /* Adjust paragraph margins for smaller screens */
-            body { overflow-y: auto; } /* Enable vertical scrolling */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <p style="padding-left: 134pt;text-indent: 0pt;text-align: left;"></p>
-    <p style="text-indent: 0pt;text-align: left;"><br/></p>
-    <p class="s1" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: center;">Room Service</p>
+    <p style="padding-left: 134pt;text-indent: 0pt;text-align: left;"></p>
+    <div class="header">
+        <p class="s1">Room Service</p>
+    </div>
     <p style="text-indent: 0pt;text-align: left;"><br/></p>
     <p class="s2" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: center;">Small Plates</p>
     <p style="padding-top: 8pt;padding-left: 2pt;text-indent: 0pt;text-align: center;">Chef’s soup of the day, charred artisan bread, salted butter <span class="s3">(vga) </span><span class="s4">7.00</span></p>
@@ -137,8 +142,6 @@
     <p class="s7" style="padding-left: 2pt;text-indent: 0pt;text-align: center;">Although we strive to take every precaution, unfortunately we cannot guarantee the total absence of trace allergens in our dishes.</p>
     <p style="text-indent: 0pt;text-align: left;"><br/></p>
     <p class="s7" style="padding-left: 2pt;text-indent: 0pt;text-align: center; margin-bottom: 60px;">V: Vegetarian VG: Vegan VGA: Adaptable to be vegan</p>
-    </div>
-
     <div class="footer">
         <!-- Share button -->
         <button class="share-btn">Share</button>
@@ -159,8 +162,8 @@
         </div>
         <!-- "Get in Touch" button -->
         <a href="http://codetta.digital/contact-us" target="_blank">
-            <button class="get-in-touch">Get in Touch</button>
-        </a>
+        <button class="get-in-touch">Get in Touch</button>
+    </a>
     </div>
 
     <script>
